@@ -1,2 +1,2 @@
 # 0810Zeronet-plugin
-Allowing 0810 Software programs to comunicate over ZeroNet
+Allowing programs (other than just browsers) to retrieve and/or send data over ZeroNet
