@@ -6,9 +6,13 @@
  "cloned_from": "1HeLLo4uzjaLetFx6NH3PMwFP3qbRbTf3D",
  "description": "",
  "files": {
+  "download-plugin/index.html": {
+   "sha512": "e880bf866071f25c09617e1190109c1a7209c20d5ce9b9aaec5b324d166a0e20",
+   "size": 1698
+  },
   "index.html": {
-   "sha512": "16b6b5d976a95870fb7d720888d4e600a954d39991dbed5f4b8a974f16f7710a",
-   "size": 1182
+   "sha512": "d4166a3830614a767e1d704c66bd6f89bc340807d2abd1f0cf68659fc72b4972",
+   "size": 1413
   },
   "js/ZeroFrame.js": {
    "sha512": "156eeae519b9f4c25914431dd93afcedd828e1da2ec80ed0ef0c45f87ad6a76d",
@@ -17,12 +21,12 @@
  },
  "ignore": "",
  "inner_path": "content.json",
- "modified": 1582466340,
+ "modified": 1582474107,
  "postmessage_nonce_security": true,
  "signers_sign": "G1QmaYLv/OHtbasA9Ogq6SUNqL/fnb2TmHienQi9rqCMVBTFgWO5NLDJQ6eU8PY4dIseCG+c2V1fJZsObzfMfpQ=",
- "signs": {"19HoaMPZe89Q9VE9MfpVekqobzNjaHaTxh": "HKxci6JGmV+4L8G/v6dLNIDfdNU+9G9+TjhJTJD/hc2MIzLwYbDVsA7DlyqRyppGI2nZAZq0Jc9F8YID6D6eo48="},
+ "signs": {"19HoaMPZe89Q9VE9MfpVekqobzNjaHaTxh": "Gw5QlgPYdL6T7pn79qgB/E0BEPZSJUwwO3dboM8n+NfMbQdSHxYKuq3zZt+6wdV6dNvghhw1hSuAZcptf9KVt/o="},
  "signs_required": 1,
- "title": "my new site",
+ "title": "0810 Software ZeroNet plugin landing page",
  "translate": ["js/all.js"],
  "zeronet_version": "0.7.1"
 }
