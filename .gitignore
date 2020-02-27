@@ -2,3 +2,4 @@
 bin/ZeroNet-CLI-win-dist-win64/data/*
 bin/ZeroNet-CLI-win-dist-win64/log/*
 !bin/ZeroNet-CLI-win-dist-win64/data/19HoaMPZe89Q9VE9MfpVekqobzNjaHaTxh/*
+081ZeroPlugin.exe
