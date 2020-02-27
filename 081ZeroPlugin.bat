@@ -7,7 +7,7 @@
 ::Yhs/ulQjdF+5
 ::cxAkpRVqdFKZSzk=
 ::cBs/ulQjdF+5
-::ZR41oxFsdFKZSDk=
+::ZR41oxFsdFKZSTk=
 ::eBoioBt6dFKZSDk=
 ::cRo6pxp7LAbNWATEpCI=
 ::egkzugNsPRvcWATEpCI=
@@ -26,7 +26,7 @@
 ::ZQ0/vhVqMQ3MEVWAtB9wSA==
 ::Zg8zqx1/OA3MEVWAtB9wSA==
 ::dhA7pRFwIByZRRnk
-::Zh4grVQjdCuDJFSF5kw5FD9bTxGPOWWuFYk74fzT+ui78hVMBNg6aoDV36DDMOwG7UzqScZ1h0BfisQ8AA5fdxzlaxcxyQ==
+::Zh4grVQjdCyDJGyX8VAjFBZVXgqLAE+1BaAR7ebv/Nagq1k1QeADKNeKio6LMu8d71GpZZo40XNU1dwFAicIJkORax07mWJXsW2LecKEtm8=
 ::YB416Ek+ZG8=
 ::
 ::
@@ -35,8 +35,29 @@
 @echo off
 if /I "%1"=="--activate" goto activate
 if /I "%1"=="-a" goto activate
-
-goto invalid
+if /I "%1"=="--deactivate" goto deactivate
+if /I "%1"=="-d" goto deactivate
+if /I "%1"=="--activate-site" goto activate-site
+if /I "%1"=="-as" goto activate-site
+if "%1"=="" (%extd% /messagebox "081ZeroPlugin Error" "Error: No command specified!" & exit)
+%extd% /messagebox "081ZeroPlugin Error" "Error: The command (%1) is not recognized!"
 exit
 :activate
-if not "%2"=="" goto 
+if not "%2"=="" goto activate-site
+start /wait "" "%0" -d
+start "" "%~dp0bin\ZeroNet-CLI-win-dist-win64\zeronet-cli.exe"
+exit
+:activate-site
+if "%2"=="" (
+%extd% /messagebox "081ZeroPlugin Error" "Error: Can't activate site if no site is specified!"
+)
+set site-to-activate=%2
+start "" "%~dp0bin\ZeroNet-CLI-win-dist-win64\zeronet-cli.exe" siteDownload %site-to-activate% || %extd% /messagebox "081ZeroPlugin Error" "Error: Can't activate site, did you specify it correctly?"
+exit
+:deactivate
+taskkill /im zeronet-cli.exe && (
+timeout /t 2
+del /f /q "%~dp0bin\ZeroNet-CLI-win-dist-win64\data\lock.pid" || %extd% /messagebox "081ZeroPlugin Error" "Deactivation error: Couldn't delete lock.pid file!"
+)  || %extd% /messagebox "081ZeroPlugin Error" "Deactivation error: Couldn't stop Zeronet-CLI.exe!"
+exit
+
