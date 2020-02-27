@@ -13,7 +13,7 @@ AppPublisher=0810 Software
 AppPublisherURL=https://github.com/0810-Software/0810Zeronet-plugin-win
 AppSupportURL=https://github.com/0810-Software/0810Zeronet-plugin-win
 AppUpdatesURL=https://github.com/0810-Software/0810Zeronet-plugin-win
-DefaultDirName=%appdata%\..\Local\Programs\0810Software\081ZeroPlugin\081Zeronet communications plugin
+DefaultDirName={localappdata}\Programs\0810Software\081ZeroPlugin\081Zeronet communications plugin
 DisableDirPage=yes
 DefaultGroupName=081Zeronet communications plugin
 DisableProgramGroupPage=yes
@@ -23,6 +23,7 @@ OutputBaseFilename=081ZeroPluginSetup
 SetupIconFile=C:\Users\marni\Documents\GitHub\0810Zeronet-plugin-win\img\icon_32x32.ico
 Compression=lzma
 SolidCompression=yes
+PrivilegesRequired=lowest
 
 [Files]
 Source: "C:\Users\marni\Desktop\0810Zeronet-plugin-win\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
