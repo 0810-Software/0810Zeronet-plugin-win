@@ -17,14 +17,18 @@
   "js/ZeroFrame.js": {
    "sha512": "156eeae519b9f4c25914431dd93afcedd828e1da2ec80ed0ef0c45f87ad6a76d",
    "size": 3835
+  },
+  "test.txt": {
+   "sha512": "c7bab3c4831d457bd2bead3490c964c5e9999765e8e7a10d3588a0c2c8048806",
+   "size": 9
   }
  },
  "ignore": "",
  "inner_path": "content.json",
- "modified": 1582474107,
+ "modified": 1582836216,
  "postmessage_nonce_security": true,
  "signers_sign": "G1QmaYLv/OHtbasA9Ogq6SUNqL/fnb2TmHienQi9rqCMVBTFgWO5NLDJQ6eU8PY4dIseCG+c2V1fJZsObzfMfpQ=",
- "signs": {"19HoaMPZe89Q9VE9MfpVekqobzNjaHaTxh": "Gw5QlgPYdL6T7pn79qgB/E0BEPZSJUwwO3dboM8n+NfMbQdSHxYKuq3zZt+6wdV6dNvghhw1hSuAZcptf9KVt/o="},
+ "signs": {"19HoaMPZe89Q9VE9MfpVekqobzNjaHaTxh": "G/rSGcA/sxtSg753VbQGSyBNbIUOjseA6MeG/OZNgHJUV+FsXNU5iALMk+jSrv+HWWtbEym0TWo00Qb4hocD4Ac="},
  "signs_required": 1,
  "title": "0810 Software ZeroNet plugin landing page",
  "translate": ["js/all.js"],
