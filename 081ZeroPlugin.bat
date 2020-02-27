@@ -39,6 +39,8 @@ if /I "%1"=="--deactivate" goto deactivate
 if /I "%1"=="-d" goto deactivate
 if /I "%1"=="--activate-site" goto activate-site
 if /I "%1"=="-as" goto activate-site
+if /I "%1"=="--download" goto download
+if /I "%1"=="-dl" goto download
 if "%1"=="" (%extd% /messagebox "081ZeroPlugin Error" "Error: No command specified!" & exit)
 %extd% /messagebox "081ZeroPlugin Error" "Error: The command (%1) is not recognized!"
 exit
@@ -60,4 +62,15 @@ timeout /t 2
 del /f /q "%~dp0bin\ZeroNet-CLI-win-dist-win64\data\lock.pid" || %extd% /messagebox "081ZeroPlugin Error" "Deactivation error: Couldn't delete lock.pid file!"
 )  || %extd% /messagebox "081ZeroPlugin Error" "Deactivation error: Couldn't stop Zeronet-CLI.exe!"
 exit
-
+:download
+if "%2"=="" (
+%extd% /messagebox "081ZeroPlugin Error" "Error: Can't download file if no url is specified!"
+)
+set tofile=%3
+if "%3"=="" (
+%extd% /savefiledialog "Download file to" "" "All Files (*.*)|*.*"
+set tofile=%result%
+)
+set fromurl=%2
+%extd% /download http://127.0.0.1:2288/%fromurl% %tofile% || %extd% /messagebox "081ZeroPlugin Error" "Error: Can't download file, did you specify the command correctly?"
+exit
